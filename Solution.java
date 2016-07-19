@@ -16,7 +16,7 @@ public class Solution {
         for (int i = 0; i < A.length; i++) {
             analyzer.accept(new MovementRequest(A[i], B[i]));
         }
-        System.out.println("analyzer = " + analyzer);
+        System.out.println(analyzer);
         return analyzer.analyzeMovementsCount();
     }
 }

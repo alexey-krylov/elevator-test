@@ -16,6 +16,13 @@ public class MovementRequest {
         this.targetFloor = targetFloor;
     }
 
+    /*===========================================[ CLASS METHODS ]================*/
+
+    @Override
+    public String toString() {
+        return weight + " -> " + targetFloor;
+    }
+
     /*===========================================[ GETTER/SETTER ]================*/
 
     public int getWeight() {
@@ -24,11 +31,5 @@ public class MovementRequest {
 
     public int getTargetFloor() {
         return targetFloor;
-    }
-
-
-    @Override
-    public String toString() {
-        return weight + " -> " + targetFloor;
     }
 }

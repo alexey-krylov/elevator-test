@@ -35,9 +35,8 @@ public class ElevatorMovementAnalyzer {
 
     public int analyzeMovementsCount() {
         int movementsCount = 0;
+        Set<Integer> movementSessionFloors = new HashSet<>();
         while (!movementRequests.isEmpty()) {
-
-            Set<Integer> movementSessionFloors = new HashSet<>();
             int movementSessionWeight = 0;
             for (int i = 0; i < maxCapacity && movementSessionWeight < maxWeight && !movementRequests.isEmpty(); i++) {
                 MovementRequest accepted = movementRequests.poll();
@@ -46,7 +45,7 @@ public class ElevatorMovementAnalyzer {
             }
 
             movementsCount += movementSessionFloors.size() + 1;
-
+            movementSessionFloors.clear();
         }
         return movementsCount;
     }
