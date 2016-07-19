@@ -50,7 +50,6 @@ public class ElevatorMovementAnalyzer {
         return movementsCount;
     }
 
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("ElevatorMovementAnalyzer{");
